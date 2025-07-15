@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>undefineds Numerologie Report</title>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Cormorant+Garamond:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { 
+            font-family: 'Cormorant Garamond', serif; 
+            background: radial-gradient(ellipse at center, #1a0033 0%, #0d0021 50%, #000011 100%); 
+            min-height: 100vh; 
+            color: #e8d5ff; 
+            position: relative; 
+            overflow-x: hidden; 
+        }
+        body::before { 
+            content: ''; 
+            position: fixed; 
+            top: 0; left: 0; width: 100%; height: 100%; 
+            background: 
+                radial-gradient(2px 2px at 20px 30px, rgba(255,255,255,0.3), transparent),
+                radial-gradient(2px 2px at 40px 70px, rgba(138,43,226,0.2), transparent),
+                radial-gradient(1px 1px at 90px 40px, rgba(255,255,255,0.4), transparent),
+                radial-gradient(1px 1px at 130px 80px, rgba(138,43,226,0.3), transparent),
+                radial-gradient(2px 2px at 160px 30px, rgba(255,255,255,0.2), transparent); 
+            background-repeat: repeat; 
+            background-size: 200px 200px; 
+            animation: stars 20s linear infinite; 
+            pointer-events: none; 
+            opacity: 0.6; 
+        }
+        @keyframes stars { 
+            from { transform: translateY(0px); } 
+            to { transform: translateY(-200px); } 
+        }
+        @keyframes pulse { 
+            0%, 100% { transform: scale(1); opacity: 0.8; } 
+            50% { transform: scale(1.1); opacity: 1; } 
+        }
+        @keyframes mysticalSweep { 
+            0% { left: -100%; } 
+            50% { left: 100%; } 
+            100% { left: -100%; } 
+        }
+        .container { 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 40px 20px; 
+            position: relative; 
+            z-index: 1; 
+        }
+        .header { 
+            text-align: center; 
+            margin-bottom: 60px; 
+            position: relative; 
+        }
+        .cosmic-symbol { 
+            font-size: 48px; 
+            margin-bottom: 20px; 
+            background: linear-gradient(45deg, #9932cc, #da70d6, #ba55d3); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+            background-clip: text; 
+            animation: pulse 3s ease-in-out infinite; 
+        }
+        .name { 
+            font-family: 'Cinzel', serif; 
+            font-size: 40px; 
+            font-weight: 700; 
+            background: linear-gradient(135deg, #da70d6, #9932cc, #ba55d3, #dda0dd); 
+            -webkit-background-clip: text; 
+            -webkit-text-fill-color: transparent; 
+            background-clip: text; 
+            margin-bottom: 10px; 
+            text-shadow: 0 0 30px rgba(153,50,204,0.5); 
+            letter-spacing: 2px; 
+        }
+        .subtitle { 
+            font-size: 18px; 
+            color: #c9a9dd; 
+            font-weight: 400; 
+            letter-spacing: 3px; 
+            text-transform: uppercase; 
+            font-style: italic; 
+        }
+        .mystical-card { 
+            background: linear-gradient(135deg, rgba(138,43,226,0.1), rgba(25,0,51,0.3)); 
+            border: 1px solid rgba(218,112,214,0.4); 
+            border-radius: 20px; 
+            padding: 30px; 
+            margin: 30px 0; 
+            backdrop-filter: blur(10px); 
+            box-shadow: 0 0 30px rgba(138,43,226,0.2); 
+            position: relative; 
+            overflow: hidden; 
+        }
+        .mystical-card::before { 
+            content: ''; 
+            position: absolute; 
+            top: 0; 
+            left: -100%; 
+            width: 100%; 
+            height: 100%; 
+            background: linear-gradient(90deg, transparent, rgba(218,112,214,0.1), transparent); 
+            animation: mysticalSweep 4s ease-in-out infinite; 
+        }
+        .card-title { 
+            font-family: 'Cinzel', serif; 
+            font-size: 24px; 
+            font-weight: 600; 
+            color: #da70d6; 
+            margin-bottom: 15px; 
+            text-align: center; 
+        }
+        .card-content { 
+            font-size: 18px; 
+            line-height: 1.8; 
+            color: #e8d5ff; 
+            text-align: center; 
+        }
+        .cta-section { 
+            background: linear-gradient(135deg, rgba(218,112,214,0.3), rgba(138,43,226,0.3)); 
+            border: 2px solid rgba(218,112,214,0.6); 
+            border-radius: 25px; 
+            padding: 40px; 
+            text-align: center; 
+            margin-top: 50px; 
+        }
+        .cta-button { 
+            background: linear-gradient(135deg, #9932cc, #da70d6); 
+            color: #1a0033; 
+            padding: 18px 40px; 
+            border: none; 
+            border-radius: 50px; 
+            font-size: 18px; 
+            font-weight: 600; 
+            text-decoration: none; 
+            display: inline-block; 
+            text-transform: uppercase; 
+            letter-spacing: 1px; 
+            transition: all 0.3s ease; 
+        }
+        .cta-button:hover { 
+            transform: translateY(-3px) scale(1.05); 
+            box-shadow: 0 0 50px rgba(138,43,226,0.8); 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="cosmic-symbol">🌟</div>
+            <div class="name">undefined</div>
+            <div class="subtitle">Dein Mystisches Numerologie-Chart</div>
+        </div>
+        
+        <div class="mystical-card">
+            <div class="card-title">🎯 Deine Lebenszahl: 7</div>
+            <div class="card-content">Du bist eine hochsensible und tiefsinnige Seele, die nach verborgenen Wahrheiten sucht und eine natürliche Begabung für spirituelle und wissenschaftliche Erkenntnisse besitzt. Deine analytischen Fähigkeiten und dein scharfer Verstand machen dich zu einem geborenen Forscher und Philosophen, während deine intuitive Kraft dir Zugang zu höheren Bewusstseinsebenen ermöglicht. In der Stille findest du deine größte Kraft, und wenn du lernst, deine Bedürfnisse nach Rückzug und Kontemplation zu respektieren, während du dich gleichzeitig behutsam der Welt öffnest, wirst du dein volles spirituelles und intellektuelles Potential entfalten können.</div>
+        </div>
+        
+        <div class="mystical-card">
+            <div class="card-title">🔮 Was dein Chart noch verbirgt...</div>
+            <div class="card-content">
+                <ul style="text-align:left;list-style:none;margin:20px 0">
+                    <li style="margin:10px 0">• Warum ist deine Lebenszahl eine 7? Das ist kein Zufall...</li>
+                    <li style="margin:10px 0">• Welche Partnerzahlen harmonieren perfekt mit dir?</li>
+                    <li style="margin:10px 0">• Wie nutzt du deine spirituelle Kraft optimal?</li>
+                    <li style="margin:10px 0">• Was bedeutet das Jahr 2025 konkret für dich?</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="cta-section">
+            <div style="font-family:'Cinzel',serif;font-size:28px;font-weight:700;margin-bottom:15px;color:#da70d6">
+                Bereit für die vollständige Deutung?
+            </div>
+            <div style="margin:20px 0">
+                ✓ Vollständige Chart-Analyse<br>
+                ✓ Meisterzahl-Bedeutung<br>
+                ✓ Partnerschafts-Kompatibilität<br>
+                ✓ Monatsprognose 2025
+            </div>
+            <a href="#" class="cta-button">Jetzt für nur 27€ freischalten</a>
+        </div>
+    </div>
+</body>
+</html>
